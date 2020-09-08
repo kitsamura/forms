@@ -1,0 +1,147 @@
+@media (max-width:800px) {
+    .form__search {
+        display: none;
+    }
+}
+
+@media (min-width:320px) and (max-width: 720px) {
+
+    .tariff__info {
+        position: absolute;
+        right: 77px;
+        top: -22px;
+        font-size: 10px;
+    }
+
+.form__input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.38;
+    max-width: 290px;
+    width: 100%;
+    color: #333333;
+    margin-right: 16px;
+    position: relative;
+}
+
+.tariff__select {
+    max-width: 290px;
+    width: 100%;
+}
+
+.form__input select {
+    max-width: 290px;
+}
+
+.label {
+    display: inline-block;
+    font-size: 12px;
+    position: absolute;
+    top: -22px;
+}
+
+.form__line_flex {
+    margin-left: 40px;
+ justify-content: flex-start;
+}
+
+.form__h1 {
+    display: inline-block;
+    color: #2c2d84;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.form__main {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.button__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 104px;
+}
+
+.form__header {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 34px;
+    padding-bottom: 38px;
+    padding-left: 20px;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.08);
+    border-top: solid 4px #2c2d84;
+}
+
+.checkbox-custom {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 20px !important;
+    height: 20px;
+    border: 1px solid;
+    margin-bottom: 2px;
+    margin-right: 11px;
+    border-color: #6771af;
+    border-radius: 1px;
+}
+
+.checkbox__label {
+    font-size: 13px;
+    line-height: 1.38;
+    color: #333333;
+    margin-left: 0px;
+}
+
+.button__label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.42;
+    text-align: center;
+    color: #afafaf;
+}
+
+.button_buy {
+    padding: 13px 24px;
+    border-radius: 4px;
+    background-color: #ea561c;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.38;
+    border: none;
+    margin-right: 25px;
+    margin-bottom: 12px;
+}
+
+.form__input input {
+    padding: 7px 12px;
+    border: solid 1px #e9ebf3;
+    background-color: #f6f7fb;
+    max-width: 290px;
+    width: 100%;
+    margin-top: 1px;
+    margin-bottom: 15px;
+}
+
+.form__line {
+    height: 1px;
+    width: 59%;
+    max-width: 465px;
+    margin-bottom: 54px;
+    background-color: #e9ebf3;
+}
+
+
+
+
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+ 
+    <title>Оформление покупки</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="form__header">
+            <div class="container form__header_flex">
+                <div class="form__header_img">
+                    <img src="img/pcblogo.svg" alt="">
+                </div>
+                <form action="https://www.psbank.ru/Search?" method="GET">
+                    <div class="form__search"> 
+                        <input  style="background: #f7f7f7;" type="text" placeholder="ПОИСК ПО САЙТУ" name='s' id="s" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="form__main">
+            <div class="form__h1">
+                Оформление покупки
+            </div>
+            <form action="https://pay2.amulex.ru/sales/external-sale/create" method='post' id='buy_form' role='form'>
+                <input type="hidden" name="sale[return_url]" value="">
+                <input type="hidden" name='rate_id' value="" id='sale_id'>
+                <input type="hidden" name='token' id='sale_key' value="">
+                <input type="hidden" name='rate_cost' value="">
+                <div class="form__input"> <label class="label" for="lastname">Фамилия</label>
+                    <input type="text" name='sale[lastname]' id="lastname" required>
+                </div>
+                <div class="form__input"> <label class="label" for="firstname">Имя</label>
+                    <input type="text" name='sale[name]' id="firstname" required>
+                </div>
+                <div class="form__input"> <label class="label" for="surname">Отчество</label>
+                    <input type="text" name='sale[surname]' id="surname" required>
+                </div>
+                <div class="form__input"> <label class="label" for="phone">Контактный телефон +7*</label>
+                    <input type="" name='sale[mobile]' id="phone" required>
+                </div>
+                <div class="form__input"> <label class="label" for="email">Email</label>
+                    <input type="email" name='sale[email]' id="email" required>
+                </div>
+                <div class="form__line_flex">
+                    <div class="form__line"></div>
+                </div>
+                <div class="form__input"> <label class="label" for="tariffname">Выберите тариф</label>
+                    <div class="tariff__selector">
+                        <select name="box" id="selector" required>
+                            <option value="none" class="option_standart">  <img src="img/selectarrow.svg"
+                                    alt=""></option>
+                            <option value="standart">«Бизнес Юрист Online»</option>
+                            <option value="plus">«Бизнес Юрист Плюс Online»</option>
+                            <option value="light">«Бизнес Юрист Лайт Online»</option>
+
+                        </select>
+                    </div>
+                    <a class="tariff__info" href="docs/pcb.pdf" target="_blank">Подробнее о тарифе</a>
+                </div>
+                <div class="form__input"> <label class="label" for="company">Наименование компании</label>
+                    <input type="text" name='sale[company]' id="company" required>
+                </div>
+                <div class="form__input" style="margin-bottom: 0px;"> <label class="label" for="inn">ИНН</label>
+                    <input type="number" name='sale[inn]' id="inn" required>
+                </div>
+                <span class="inn__label">от 10 до 12 символов</span>
+                <div class="agreement">
+                    <label>
+                        <div class="agreement__flex">
+                            <div>
+                                <input class="checkbox" type="checkbox" id="agree" required>
+                                <span class="checkbox-custom"></span>
+                            </div>
+                            <div>
+                                <span class="checkbox__label"> Я согласен с
+                                    <a style="color: #274193" href="docs/agreement.pdf" target="_blank">условиями обработки персональных
+                                        данных</a>
+                                </span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="button__flex">
+                    <div>
+                        <button class="button_buy" id="accept" onclick="ym(61891560,'reachGoal','toPayment'); return true;" >
+                            Перейти к оплате
+                        </button>
+                    </div>
+                    <div>
+                        <span class="button__label">Вы можете оплатить покупку банковской <br> картой или по
+                            выставленному счету</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <div class="oferta">
+                <a class="docs__href" href="docs/oferta.pdf" target="_blank">Правила пользования юридической помощью, информационной и справочной поддержкой с использованием
+                    интернет-сервиса и юридической телефонной линии Амулекс</a>
+            </div>
+        </div>
+        
+    </main>
+    <script src="js/script.js"></script>
+    
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61891560, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/61891560" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

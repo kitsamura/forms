@@ -1,0 +1,241 @@
+@media (max-width:580px) {
+    .form__header_flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .form__number a {
+        color: #666666;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 10px;
+    }
+    .form__number {
+        text-align: right;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 0 15px;
+    }
+
+    .button__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 64px;
+    }
+
+    .button__label {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 1.42;
+        text-align: center;
+        color: #afafaf;
+        margin-bottom: 10px;
+    }
+    
+    .button_buy {
+        padding: 13px 24px;
+        border-radius: 4px;
+        color: #ffffff;
+        font-size: 13px;
+        line-height: 1.38;
+        border: none;
+        margin-right: 0px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .form__footer {
+        text-align: center !important;
+    }
+
+    .form__input_flex {
+        flex-direction: column;
+    }
+    
+    .firstname, .surname {
+        width: 100%;
+        max-width: 400px;
+        margin-right: 0px !important;
+    }
+
+    .footer__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    
+    .footer__info_nus {
+        margin-top: 15px;
+        text-align: center !important;
+    }
+    
+    .docs__href {
+        border-bottom: 1px solid #666666;
+        margin-bottom: 0px;
+    }
+
+}
+
+@media (min-width:320px) and (max-width: 860px) {
+
+.tariff__info {
+        position: absolute;
+        right: -190px;
+        top: 1px;
+        font-size: 10px;
+    }
+
+.container {
+    margin: 0 15px;
+}
+
+.form__input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.38;
+    color: #333333;
+    margin-right: 16px;
+    position: relative;
+}
+
+.form__input_flex {
+    flex-direction: column;
+}
+
+.label {
+    display: inline-block;
+    font-size: 12px;
+    position: absolute;
+    top: -22px;
+}
+
+.form__line_flex {
+    margin-left: 40px;
+ justify-content: flex-start;
+}
+
+.form__h1 {
+    display: inline-block;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.form__main {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px !important;
+    background: transparent;
+} 
+
+.button__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 104px;
+}
+
+.checkbox-custom {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 20px !important;
+    height: 20px;
+    border: 1px solid;
+    margin-bottom: 2px;
+    margin-right: 11px;
+    border-color: #6771af;
+    border-radius: 1px;
+}
+
+.form__footer {
+    margin: 0;
+}
+
+.button__flex {
+    background: #ffffff;
+    width: 103%;
+    margin-left: -10px;
+}
+
+.checkbox__label {
+    font-size: 13px;
+    line-height: 1.38;
+    color: #333333;
+    margin-left: 0px;
+}
+
+.button__label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.42;
+    text-align: center;
+    color: #afafaf;
+    margin-bottom: 10px;
+}
+
+.button_buy {
+    padding: 13px 24px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.38;
+    border: none;
+    margin-right: 0px;
+    margin-bottom: 12px;
+}
+
+
+.form__input input {
+    width: 100%;
+    margin-top: 1px;
+    max-width: 290px;
+    margin-bottom: 15px;
+}
+
+.form__line {
+    height: 1px;
+    width: 59%;
+    max-width: 465px;
+    margin-bottom: 54px;
+    background-color: #e9ebf3;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.footer__info_nus {
+    margin-top: 15px;
+    text-align: center !important;
+}
+
+.docs__href {
+    display: inline-block;
+    text-align: center !important;
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+}

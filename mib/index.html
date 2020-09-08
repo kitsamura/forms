@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+
+    <title>Оформление покупки</title>
+</head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(
+            k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(62144863, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+    });
+</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/62144863" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+
+<body>
+    <header>
+        <div class="form__header">
+            <div class="container form__header_flex">
+                <div class="form__header_img">
+                    <img src="img/miblogo.svg" alt="">
+                </div>
+                <div class="form__number">
+                    <a href="tel:88002509797">8 800 250 97 97</a>
+                    <br>
+                    <span>звонок по России бесплатный</span>
+                </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="form__main">
+            <div class="form__h1">
+                Оформление покупки
+            </div>
+            <form action="https://pay2.amulex.ru/sales/external-sale/create" method='post' id='buy_form' role='form'>
+                <input type="hidden" name="sale[return_url]" value="">
+                <input type="hidden" name='rate_id' value="" id='sale_id'>
+                <input type="hidden" name='token' id='sale_key' value="">
+                <input type="hidden" name='rate_cost' value="">
+                <div class="form__input"> <label class="label" for="lastname">Фамилия <span class="important">*</span>
+                    </label><br>
+                    <input type="text" name='sale[lastname]' id="lastname" required>
+                </div>
+                <div class="form__input_flex">
+                    <div class="form__input firstname"><label class="label" for="firstname">Имя <span
+                                class="important">*</span>
+                        </label><br>
+                        <input type="text" name='sale[name]' id="firstname" required>
+                    </div>
+                    <div class="form__input surname"> <label class="label" for="surname">Отчество <span
+                                class="important">*</span></label><br>
+                        <input type="text" name='sale[surname]' id="surname" required>
+                    </div>
+                </div>
+                <div class="form__input"> <label class="label" for="phone">Контактный телефон <span
+                            class="important">*</span> </label><br>
+                    <input type="" name='sale[mobile]' placeholder="+7 (   )" id="phone" required>
+                </div>
+                <div class="form__input"> <label class="label" for="email">Email <span class="important">*</span>
+                    </label><br>
+                    <input type="email" name='sale[email]' id="email" required>
+                </div>
+                <div class="form__input"> <label class="label" for="tariffname">Выберите тариф <span
+                            class="important">*</span>
+                        <a class="tariff__info" href="docs/mib.pdf" target="_blank">Подробнее о тарифе</a>
+                    </label><br>
+                    <div class="tariff__selector">
+                        <select id="selector" required>
+                            <option class="option_standart"><img src="img/selectarrow.svg"></option>
+                            <option value="standart">«Личный Адвокат Online» (3 400р.)</option>
+                            <option value="light">«Личный Адвокат Лайт Online» (1 950р.)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="agreement">
+                    <label>
+                        <div class="agreement__flex">
+                            <div>
+                                <input class="checkbox" type="checkbox" id="agree" required>
+                                <span class="checkbox-custom"></span>
+                            </div>
+                            <div>
+                                <span class="checkbox__label"> Нажимая на данную кнопку, я свободно, своей волей и в
+                                    <br> своем интересе даю cогласие на
+                                    <a style="color:#199cd8" href="docs/agreement.pdf" target="_blank"> обработку
+                                        персональных <br> данных</a>
+                                </span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="button__flex">
+                    <div>
+                        <button class="button_buy" id="accept">
+                            ПЕРЕЙТИ К ОПЛАТЕ
+                        </button>
+                    </div>
+                    <div>
+                        <span class="button__label">Вы можете оплатить покупку банковской <br> картой </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer__img"></div>
+        <div class="form__footer">
+            <div class="footer__info">
+                <div class="footer__info_company">
+                    © 2003-2020 ПАО АКБ «Металлинвестбанк» - потребительский кредит, кредит наличными и покупки в
+                    кредит, вклады, банковские карты.
+                </div>
+                <div class="footer__info_nus" style="text-align: right">
+                    Услуги оказывает ООО "АдвоСервис"
+                </div>
+            </div>
+            <div class="oferta">
+                <a class="docs__href" href="docs/oferta.pdf" target="_blank">Правила пользования юридической помощью,
+                    информационной и справочной поддержкой с использованием
+                    интернет-сервиса и юридической телефонной линии АдвоСервис</a>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/script.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(61891560, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/61891560" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

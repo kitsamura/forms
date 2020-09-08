@@ -1,0 +1,266 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 944px;
+    margin: 0 auto;
+}
+
+
+.form__header {
+    /* display: flex;
+    justify-content: flex-start; */
+    padding-top: 60px;
+    padding-bottom: 64px;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.08);
+    border-top: solid 4px #2c2d84;
+}
+
+.form__header_img {
+    margin-top: -27px;
+}
+
+.form__main {
+    padding-top: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__h1 {
+    display: inline-block;
+    color: #2c2d84;
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 33px;
+}
+
+.form__input, .agreement {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.38;
+    color: #333333;
+    margin-right: 16px;
+    position: relative;
+}
+
+.form__search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.38;
+    color: #333333;
+    margin-right: 16px;
+    position: relative;
+}
+
+.checkbox__label {
+    font-size: 13px;
+    line-height: 1.38;
+    color: #333333;
+    margin-left: 12px;
+}
+
+.inn__label {
+display: inline-block;
+font-size: 12px;
+text-align: left;
+color: #afafaf;
+margin-bottom: 24px;
+margin-left: 185px;
+}
+
+.form-flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.label {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.form__input input  {
+    padding: 7px 12px;
+    border: solid 1px #e9ebf3;
+    background-color: #f6f7fb;
+    width: 290px;
+}
+
+.form__search input  {
+    padding: 7px 12px;
+    border: solid 1px #e9ebf3;
+    background-color: #f7f7f7;
+    width: 290px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none !important;
+    background-image: url('../img/selectarrow.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: right;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-decoration: none;
+    padding: 7px 12px;
+    border: solid 1px #e9ebf3;
+    background-color: #f6f7fb;
+    width: 316px;
+    margin-bottom: 15px;
+}
+
+.tariff_light,
+.tariff_standart,
+.tafir_vip {
+    text-align: center;
+}
+
+.form__input input:hover {
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form__input input:focus {
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px #e9ebf3;
+    background-color: #ffffff;
+}
+
+.form__line {
+    height: 1px;
+    width: 100%;
+    max-width: 465px;
+    margin-bottom: 24px;
+    background-color: #e9ebf3;
+
+}
+
+.form__line_flex {
+    display: flex;
+    justify-content: center;
+}
+
+.tariff__info {
+    position: absolute;
+    right: -149px;
+    color: #274193;
+    line-height: 1.42;
+    border-bottom: 1px dashed #274193;
+}
+
+.tariff__info:hover{
+    color: #274193;
+    line-height: 1.42;
+    border-bottom: 1px dashed transparent;
+}
+
+.checkbox-custom {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 20px !important;
+    height: 20px;
+    border: 1px solid;
+    border-color: #6771af;
+    border-radius: 1px;
+}
+
+/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+.checkbox:checked+.checkbox-custom::before {
+    content: "";
+    /* Добавляем наш псевдоэлемент */
+    display: block;
+    /* Делаем его блочным элементом */
+    position: absolute;
+    /* Позиционируем его абсолютным образом */
+    /* Задаем расстояние от верхней, правой, нижней и левой границы */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../img/checkbox.svg');
+    /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 40%;
+    transition: .5s;
+    border: 0px solid #6771af !important;
+
+}
+
+.checkbox {
+    position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.checkbox:checked+.checkbox-custom {
+    background-image: url('../img/checked.svg');
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 40%;
+    background: #6771af;
+}
+
+.agreement__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.form__header_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button_buy {
+padding: 13px 24px;
+border-radius: 4px;
+background-color: #ea561c;
+opacity: 0.5;
+color: #ffffff;
+font-size: 13px;
+line-height: 1.38;
+border: none;
+margin-right: 25px;
+}
+
+.button__label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.42;
+    text-align: left;
+    color: #afafaf;
+}
+
+.button__flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 104px;
+}
+
+.docs__href {
+    display: inline-block;
+    color: #274193;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 50px;
+}
